@@ -24,6 +24,7 @@ function run() {
         bufferCommands: false,
         bufferMaxEntries: 0
       })
+
       conn.model(
         'Product',
         new mongoose.Schema({
@@ -35,9 +36,9 @@ function run() {
       )
     }
 
-    const M = conn.model('Product')
+    const Model = conn.model('Product')
 
-    const doc = yield M.find()
+    const doc = yield Model.find()
 
     console.log({ doc })
 
